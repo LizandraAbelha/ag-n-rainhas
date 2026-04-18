@@ -43,16 +43,13 @@ public class IndNRainhas implements Individuo {
 
     @Override
     public List<Individuo> recombinar(Individuo pai2) {
-        // Converte o pai2 genérico para o tipo específico de Rainhas para acessar os genes
         IndNRainhas p2 = (IndNRainhas) pai2;
         
-        // Sorteia o ponto de corte (entre 1 e qtdGenes - 1 para não pegar as pontas)
         int pontoCorte = gerador.nextInt(qtdGenes - 1) + 1;
         
         int[] genesFilho1 = new int[qtdGenes];
         int[] genesFilho2 = new int[qtdGenes];
         
-        // Crossover de 1 ponto
         for (int i = 0; i < qtdGenes; i++) {
             if (i < pontoCorte) {
                 genesFilho1[i] = this.genes[i];

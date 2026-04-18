@@ -52,7 +52,6 @@ public class Ag {
             popIni = novaPop; 
 
             Individuo melhorDaGeracao = popIni.get(0);
-            System.out.println("Geração " + g + " | Melhor: " + melhorDaGeracao);
 
 
             if (melhorDaGeracao.getAvaliacao() == 0) {
